@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="slide.js" defer></script>
+    <title>CatHood</title>
+</head>
+<body align="center" >
+
+  <!--Cabeçalho-->
+<header>
+  <div class="titulo">
+    <h1>Cat hood</h1>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#jogar">Jogar</a></li>
+      <li><a href="#tutorial">Tutorial</a></li>
+      <li><a href="#comentario">Comentários</a></li>
+
+      <li><a href="cadastro.html">Cadastro</a></li>
+    </ul>
+  </div>
+  
+</header>
+
+<br> <br>
+
+
+  <!--História do jogo-->
+  <section id="sobre">
+  <h2 >Sobre o jogo</h2>
+  <br>
+  <div class="txt">
+  <p>Há muito tempo uma aldeia é governada por uma terrível tartaruga e seus ajudantes, que com a constante exploração, ficaram sem alimentos.
+    Então, um garotinho morarador da aldeia, que ama gatos e revoltado com essa situação, passa em uma missão de roubar comida para alimentar seu povo, apenas com um capuz e arco. Ajude-o a chegar seguro em casa com o máximo de comida
+  </p>  <br>
+  <p><b>Colete as maçãs!</b></p> <br>
+  <p><b>Não toque nas abelhas! </b></p></div>
+</section>
+<br> <br>
+<section id="jogar">
+  <!--Jogo-->
+  <h2>Jogue agora</h2>
+<br>
+<div class="img">
+<a href="http://gx.games/pt-br/games/ra36fn/cat-hood/tracks/bd5d9f6b-9cd6-42d7-a042-5925092df900/" target="_blank" rel="noopener noreferrer"><img  src="img_jogo/Slide1.JPG" alt="Jogue agora" height="320px" width="460px" align="center"></a><br>
+</div>
+</section>
+<br> <br>
+<!--Tutorial-->
+<section id="tutorial">
+  <h2>Como foi feito o jogo</h2>
+  <div class="container-slider">
+    <button id="prev-button"><img src="img_jogo/seta.png" alt="prev-button"></button>
+    <div class="container-images">
+      <img src="slide/Slide1.JPG" alt="girl" class="slider on">
+      <img src="slide/Slide2.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide3.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide4.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide5.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide6.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide7.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide8.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide9.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide10.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide11.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide12.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide13.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide14.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide15.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide16.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide17.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide18.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide19.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide20.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide21.JPG" alt="girl" class="slider ">
+      <img src="slide/Slide22.JPG" alt="girl" class="slider ">
+      
+     
+
+      
+    </div>
+    <button id="next-button"><img src="img_jogo/seta.png" alt="next-button"></button>
+  </div>
+  <br><br>
+  
+</section>
+<section id="comentario">
+
+      <!--Fórum-->
+    <div id="comment-section">
+        <h2>O que achou do jogo?</h2><br>
+        
+        <div class="caixa">
+        <textarea id="comment-input" placeholder="De sua opinião"></textarea><br>
+      </div>
+       <div class="botao">
+        <button id="comment-button">Enviar</button>
+      </div>
+      <h4>Comentários</h4>
+      <div id="comments">
+        <!-- Aqui serão exibidos os comentários -->
+      </div>
+      </div>
+    </section>
+      <script>
+        // Obtém elementos do DOM
+const commentInput = document.getElementById("comment-input");
+const commentButton = document.getElementById("comment-button");
+const commentsContainer = document.getElementById("comments");
+
+// Array para armazenar os comentários
+const comments = [];
+
+// Evento de clique no botão
+commentButton.addEventListener("click", () => {
+  const commentText = commentInput.value;
+  if (commentText.trim() !== "") {
+    // Adiciona o comentário ao array
+    comments.push(commentText);
+    // Limpa o campo de entrada
+    commentInput.value = "";
+    // Atualiza a exibição dos comentários
+    displayComments();
+  }
+});
+
+// Função para exibir os comentários
+function displayComments() {
+  commentsContainer.innerHTML = "";
+  comments.forEach((comment) => {
+    const commentElement = document.createElement("div");
+    commentElement.textContent = comment;
+    commentsContainer.appendChild(commentElement);
+  });
+}
+      </script>
+
+<br><br>
+<div class="rodape"></div>
+</body>
+</html>
